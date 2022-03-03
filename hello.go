@@ -3,10 +3,14 @@ package main
 
 // Here we have imports.
 // The 'fmt' package gives us formatting functions like Print.
-import "fmt"
+import (
+	"fmt"
+
+	"rsc.io/quote" // This is an external package.
+)
 
 // When you run a package, it's main function will be called.
 func main() {
-	// Here's the Println function from the fmt package.
-	fmt.Println("Hello World!")
+	// We're calling Go() from the quote package.
+	fmt.Println(quote.Go())
 }

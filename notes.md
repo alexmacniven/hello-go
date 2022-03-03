@@ -17,3 +17,10 @@
   ```
   $ go run .
   ```
+## Call Code in an External Package
+- Visit pkg.go.dev and find a package to use, i.e. rsc.io/quote
+  - The package's documentation will tell you what functions the package supports
+- Add the package to the our code and tidy
+  ```
+  $ go mod tidy
+  ```
