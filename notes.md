@@ -24,3 +24,17 @@
   ```
   $ go mod tidy
   ```
+## Call Code in a Local External Package
+- Assume you have the `greetings` package in your local environment
+- Add the dependency as you would any other package
+  - But use the full path as you would if it were deployed
+  - `example.com/greetings`
+- After developing your code you need to add an alias
+  - An alias will map `example.com/greetings` to a local package
+  ```
+  $ go mod edit -replace example.com/greetings=../greetings-go
+- Then we need to sync our mod file
+  ```
+  $ go mod tidy
+  ```
+- Assuming everything is correct, you can use the external package in your code
