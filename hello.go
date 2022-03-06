@@ -25,9 +25,12 @@ func main() {
 	log.SetPrefix("greetings: ")
 	// Set a flag to disable the time being printed.
 	log.SetFlags(0)
-	// We're calling Hello() from the greetings package.
+	// Create a slice of string names using the slice shorthand.
+	names := []string{"Alex", "Jake", "Sarah"}
+	// We're calling Hellos() from the greetings package.
+	// And we supply the names slice as an argument.
 	// We'll also capture any errors returned.
-	message, err := greetings.Hello("Alex")
+	message, err := greetings.Hellos(names)
 	// If an error is returned we log it with Fatal so the program exits.
 	if err != nil {
 		log.Fatal(err)
